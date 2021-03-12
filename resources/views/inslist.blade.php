@@ -149,16 +149,16 @@
                           #Id
                       </th>
                       <th style="width: 20%">
-                      Society
+                      Societe
                       </th>
                       <th style="width: 8%">
-                      Pattern
+                      Motif
                       </th>
                       <th>
                       Commercial
                       </th>
                       <th style="width: 30%" class="text-center">
-                      Sell price
+                      Prix de vente
                       </th>
                       <th style="wiDth: 20%">
                       dates

@@ -168,12 +168,12 @@
 
                 <hr>
 
-                <strong><i class="fas fa-map-marker-alt mr-1"></i> Role</strong>
+                <strong><i class="fas fa-map-marker-alt mr-1"></i> type client </strong>
                 <p class="text-muted"> {{ $user->clienttype }}</p>
 
                 <hr>
 
-                <strong><i class="fas fa-pencil-alt mr-1"></i> Is admin</strong>
+                <strong><i class="fas fa-pencil-alt mr-1"></i> Est administrateur?</strong>
 
                 <p class="text-muted">
                 

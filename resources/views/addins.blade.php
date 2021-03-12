@@ -128,20 +128,20 @@
             <form  method="post" action="addinspostdata">
             @csrf
                 <div class="form-group">
-                    <label for="title">Invoice number</label>
-                    <input type="text" class="form-control" id="" name="num_facture" placeholder="Invoice number...">
+                    <label for="title">Numéro de facture</label>
+                    <input type="text" class="form-control" id="" name="num_facture" placeholder="Numéro de facture...">
                 </div>
                 <div class="form-group">
-                    <label for="Department">Pattern</label>
-                    <input type="text" class="form-control" id="" name="motif" placeholder="Pattern...">
+                    <label for="Department">Motif</label>
+                    <input type="text" class="form-control" id="" name="motif" placeholder="Motif...">
                 </div>
                 <div class="form-group">
-                    <label for="Location">Society</label>
-                    <input type="text" class="form-control" id="" name="societe" placeholder="Society....">
+                    <label for="Location">Societe</label>
+                    <input type="text" class="form-control" id="" name="societe" placeholder="society....">
                 </div>
                 <div class="form-group">
-                    <label for="description">Incident description</label>
-                    <textarea type="text" class="form-control" id="" name="description" placeholder="Describe the incident..."></textarea>
+                    <label for="description">Description</label>
+                    <textarea type="text" class="form-control" id="" name="description" placeholder="Description..."></textarea>
                 </div>
                 <!-- Date -->
                 <div class="form-group">
@@ -153,16 +153,16 @@
                         </div>
                 </div>
                 <div class="form-group">
-                    <label for="Location">Delivery man</label>
-                    <input type="text" class="form-control" id="" name="livreur" placeholder="Delivery man....">
+                    <label for="Location">Livreur</label>
+                    <input type="text" class="form-control" id="" name="livreur" placeholder="Livreur....">
                 </div>
                 <div class="form-group">
                     <label for="Location">Decision</label>
                     <input type="text" class="form-control" id="" name="decision" placeholder="Decision....">
                 </div>
                 <div class="form-group">
-                    <label for="Location">Sold to</label>
-                    <input type="text" class="form-control" id="" name="vendu_a" placeholder="Sold to....">
+                    <label for="Location">vendu a</label>
+                    <input type="text" class="form-control" id="" name="vendu_a" placeholder="Vendue a....">
                 </div>
                 <div class="form-group">
                     <label for="Location">Client</label>
@@ -172,7 +172,7 @@
                     <label for="Location">Responsible service</label>
                     <!--input type="text" class="form-control" id="" name="service_resp" placeholder="Responsible service...."-->
                     <select style="text-align-last:center;" class="form-control" name="service_resp" id="role">
-                                      <option value="">--Responsible service....--</option>
+                                      <option value="">--Service responsable....--</option>
                                       <option value="resplogistique">Service logistique</option>
                                       <option value="respadv">Service ADV</option>
                                        <option value="respproduction">service production</option>
@@ -186,16 +186,16 @@
                
                 
                 <div class="form-group">
-                    <label for="Location">Resale regulation</label>
-                    <input type="text" class="form-control" id="" name="regelement_revente" placeholder="Resale regulation....">
+                    <label for="Location">Réglementation du revente</label>
+                    <input type="text" class="form-control" id="" name="regelement_revente" placeholder="Réglementation de la revente....">
                 </div>
                 <div class="form-group">
                     <label for="Location">Commercial</label>
-                    <input type="text" class="form-control" id="" value="{{ Auth::user()->name }}" name="commercial" placeholder="commercial name....">
+                    <input type="text" class="form-control" id="" value="{{ Auth::user()->name }}" name="commercial" placeholder="commercial....">
                 </div>
                 <div class="form-group">
-                    <label for="Location">Sell price</label>
-                    <input type="text" class="form-control" id="" name="prix_vente" placeholder="Sell price....">
+                    <label for="Location">Prix de vente</label>
+                    <input type="text" class="form-control" id="" name="prix_vente" placeholder="Prix de vente....">
                 </div>
 
               </div>

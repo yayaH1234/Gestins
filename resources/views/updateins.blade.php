@@ -143,26 +143,26 @@
           <div class="col">
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">declared incident</h3>
+                <h3 class="card-title">incident déclaré</h3>
               </div>
             <div class="card-body">
             <form  method="POST" action="{{ route('inslist.update',$incident->id) }}" >
             @csrf
               @method('PUT')
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Invoice number</label>
+                    <label for="exampleInputEmail1">Numéro de facture</label>
                     <input type="text" class="form-control" name="num_facture" id="" value="{{ $incident->num_facture }}" placeholder="Invoice number...">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Pattern</label>
+                    <label for="exampleInputEmail1">Motif</label>
                     <input type="text" class="form-control" id=""  name="motif" value="{{ $incident->motif }}" placeholder="Pattern...">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Society</label>
+                    <label for="exampleInputEmail1">Societe</label>
                     <input type="text" class="form-control" name="societe"  value="{{ $incident->societe }}" id="" placeholder="Society....">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Incident description</label>
+                    <label for="exampleInputEmail1">Description de l'incident</label>
                     <textarea type="text" class="form-control" name="description"   id="" placeholder="Describe your incident..."> {{ $incident->description }} </textarea>
                 </div>
                 <!-- Date -->
@@ -176,7 +176,7 @@
                     </div>
 
                     <div class="form-group">
-                    <label for="Location">Delivery man</label>
+                    <label for="Location">Livreur</label>
                     <input type="text" class="form-control" id="" value="{{ $incident->livreur }}" name="livreur" placeholder="Delivery man....">
                 </div>
                 <div class="form-group">
@@ -184,7 +184,7 @@
                     <input type="text" class="form-control" id="" value="{{ $incident->decision }}" name="decision" placeholder="Decision....">
                 </div>
                 <div class="form-group">
-                    <label for="Location">Sold to</label>
+                    <label for="Location">Vendu à</label>
                     <input type="text" class="form-control" id="" value="{{ $incident->vendu_a }}" name="vendu_a" placeholder="Sold to....">
                 </div>
                 <div class="form-group">
@@ -192,7 +192,7 @@
                     <input type="text" class="form-control" id="" value="{{ $incident->client }}" name="client" placeholder="Client....">
                 </div>
                 <div class="form-group">
-                    <label for="Location">Responsible service</label>
+                    <label for="Location">Service responsable</label>
                     <!--input type="text" class="form-control" id="" name="service_resp" placeholder="Responsible service...."-->
                     <select style="text-align-last:center;" class="form-control" name="service_resp" id="role">
                                       <option value="">--Responsible service....--</option>
@@ -209,7 +209,7 @@
                
                 
                 <div class="form-group">
-                    <label for="Location">Resale regulation</label>
+                    <label for="Location">Réglementation de la revente</label>
                     <input type="text" class="form-control" id="" value="{{ $incident->regelement_revente }}" name="regelement_revente" placeholder="Resale regulation....">
                 </div>
                 <div class="form-group">
@@ -217,7 +217,7 @@
                     <input type="text" class="form-control" id=""  value="{{ $incident->commercial }}" name="commercial" placeholder="commercial name....">
                 </div>
                 <div class="form-group">
-                    <label for="Location">Sell price</label>
+                    <label for="Location">Prix de vente</label>
                     <input type="text" class="form-control" id="" value="{{ $incident->prixvente }}" name="prix_vente" placeholder="Sell price....">
                 </div>
 

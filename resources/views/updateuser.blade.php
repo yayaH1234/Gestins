@@ -132,11 +132,11 @@
               @method('PUT')
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Full name</label>
+                    <label for="exampleInputEmail1">Nom complet</label>
                     <input type="text" class="form-control" value="{{ $user->name }}" id="" name="name" placeholder="Enter email">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Role</label>
+                    <label for="exampleInputEmail1">droit d'acces du client</label>
                     <!--input type="email" class="form-control" id="" placeholder="Enter email"-->
                       <select  class="form-control @error('role') is-invalid @enderror" name="role" id="role">
                                       
@@ -166,7 +166,7 @@
                     <input type="password" class="form-control" id="" name="password2" placeholder="Password">
                   </div>
                   <div class="form-group">
-                    <label for="">is Admin :</label><br>
+                    <label for="">Est Admin ?</label><br>
                     <label for="yes">Yes</label>
 
                      <input type="radio" id="adminchoice"  name="radio" value="true" {{ $user->is_admin == '1' ? 'checked' : '' }}>

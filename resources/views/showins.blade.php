@@ -219,7 +219,7 @@
                 <div class="card-footer">
                   <div class="text-right">
                     <a href="/viewdet/{{ $incident->id }}" class="btn btn-sm btn-primary">
-                      <i class="fas fa-user"></i> View Details
+                      <i class="fas fa-user"></i> Voir les détails
                     </a>
                   </div>
                 </div>

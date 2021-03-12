@@ -244,7 +244,7 @@
                 
                 
                 
-                <strong><i class="fas fa-book mr-1"></i> Invoice number</strong>
+                <strong><i class="fas fa-book mr-1"></i> Numéro de facture</strong>
 
                 <p class="text-muted">
                 {{ $incident->num_facture }}
@@ -252,13 +252,13 @@
 
                 <hr>
 
-                <strong><i class="fas fa-map-marker-alt mr-1"></i> Pattern</strong>
+                <strong><i class="fas fa-map-marker-alt mr-1"></i> Motif</strong>
                 <p class="text-muted"> 
                 {{ $incident->motif }} </p>
 
                 <hr>
 
-                <strong><i class="fas fa-pencil-alt mr-1"></i> Society</strong>
+                <strong><i class="fas fa-pencil-alt mr-1"></i> Societe</strong>
 
                 <p class="text-muted">
                 {{ $incident->societe }}
@@ -276,7 +276,7 @@
             
 
                 <hr>
-              <strong><i class="fas fa-pencil-alt mr-1"></i> Delivery man</strong>
+              <strong><i class="fas fa-pencil-alt mr-1"></i> Livreur</strong>
 
                 <p class="text-muted">
                 {{ $incident->livreur }}
@@ -294,7 +294,7 @@
                 <hr>
 
 
-                <strong><i class="fas fa-pencil-alt mr-1"></i> Sold to</strong>
+                <strong><i class="fas fa-pencil-alt mr-1"></i> vendue a</strong>
 
                 <p class="text-muted">
                 {{ $incident->vendu_a }}
@@ -312,7 +312,7 @@
                 <hr>
 
 
-                <strong><i class="fas fa-pencil-alt mr-1"></i> Responsible service</strong>
+                <strong><i class="fas fa-pencil-alt mr-1"></i> Service responsable</strong>
 
                 <p class="text-muted">
                 {{ $incident->service_resp }}
@@ -321,7 +321,7 @@
                 <hr>
 
 
-                <strong><i class="fas fa-pencil-alt mr-1"></i> Resale regulation</strong>
+                <strong><i class="fas fa-pencil-alt mr-1"></i> Réglementation de la revente</strong>
 
                 <p class="text-muted">
                 {{ $incident->regelement_revente }}
@@ -338,7 +338,7 @@
 
                 <hr>
 
-                  <strong><i class="fas fa-pencil-alt mr-1"></i> Sell price</strong>
+                  <strong><i class="fas fa-pencil-alt mr-1"></i> Prix de vente</strong>
 
                   <p class="text-muted">
                   {{ $incident->prix_vente }}

@@ -74,10 +74,10 @@
                                 <select class="form-control @error('role') is-invalid @enderror" name="role" id="role">
                                       <option value="">--Please choose a role--</option>
                                       <option value="commercial">commercial</option>
-                                      <option value="respqualite">Quality Manager</option>
-                                       <option value="respproduction">Responsible production</option>
-                                        <option value="respadv">responsable adv</option>
-                                        <option value="resplogistique">logistics manager</option>
+                                      <option value="respqualite">Responsable qualité</option>
+                                       <option value="respproduction">Responsable production</option>
+                                        <option value="respadv">Responsable adv</option>
+                                        <option value="resplogistique">Responsable logistique</option>
                                 </select>
                                 @error('role')
                                     <span class="invalid-feedback" role="alert">
