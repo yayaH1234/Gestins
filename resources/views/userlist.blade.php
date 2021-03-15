@@ -25,7 +25,7 @@
 
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color:#FF4136;">
     <!-- Brand Logo -->
     <a href="" class="brand-link">
       <img src="dist/img/AdminLTELogo.png" alt="Dindy" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -71,6 +71,36 @@
             </a>
            
           </li>
+          <li class="nav-item">
+            <a href="searchins" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+              Incidents search
+                
+              </p>
+            </a>
+           
+          </li>
+          <li class="nav-item">
+            <a href="addUser" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+              Add user
+                
+              </p>
+            </a>
+           
+          </li>
+           <li class="nav-item">
+            <a href="approveins" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+              Approver des incidents
+                
+              </p>
+            </a>
+           
+          </li>
 
           
         </ul>
@@ -81,7 +111,7 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper" style="background-image: url('dist/img/dindy2.jpg');">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">

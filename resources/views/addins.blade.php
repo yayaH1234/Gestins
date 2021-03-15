@@ -44,7 +44,7 @@
 
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color:#FF4136;">
     <!-- Brand Logo -->
     <a href="" class="brand-link">
       <img src="dist/img/AdminLTELogo.png" alt="Dindy" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -73,7 +73,17 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Dashboard
+                  Ajouter des incidents
+                
+              </p>
+            </a>
+           
+          </li>
+           <li class="nav-item">
+            <a href="/listinsforcommercial" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+               Afficher les incidents
                 
               </p>
             </a>
@@ -96,7 +106,7 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper" style="background-image: url('dist/img/dindy2.jpg');">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
@@ -120,8 +130,8 @@
 
         <div class="row">
           <div class="col">
-            <div class="card card-primary">
-              <div class="card-header">
+            <div class="card card-primary" >
+              <div class="card-header" style="background-color:#2e8b57">
                 <h3 class="card-title">declared incident</h3>
               </div>
             <div class="card-body">
@@ -205,7 +215,7 @@
                
                 <!-- /.form group -->
                 <div class="">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" style="background-color:#2e8b57" class="btn btn-primary">Submit</button>
                 </div>
             </form>
               <!-- /.card -->

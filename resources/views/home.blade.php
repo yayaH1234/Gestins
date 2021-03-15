@@ -37,7 +37,8 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 body {
-	background-color: #111;
+	/* background-color: #111; */
+  background-color: #cccccc;
 }
 
 .title {
@@ -91,7 +92,7 @@ h1 {
 
 </head>
 
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini" >
 <nav>
 
 @extends('layouts.app')
@@ -103,7 +104,7 @@ h1 {
 
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color:#FF4136;">
     <!-- Brand Logo -->
     <a href="" class="brand-link">
       <img src="dist/img/AdminLTELogo.png" alt="Dindy" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -134,10 +135,20 @@ h1 {
             <a href="/homeC" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Dashboard
+                  Ajouter des incidents
                 
               </p>
             </a>
+          </li>
+          <li class="nav-item">
+            <a href="/listinsforcommercial" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+               Afficher les incidents
+                
+              </p>
+            </a>
+           
           </li>
         </ul>
       </nav>
@@ -166,6 +177,37 @@ h1 {
             </a>
            
           </li>
+          <li class="nav-item">
+            <a href="searchins" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+              Incidents search
+                
+              </p>
+            </a>
+           
+          </li>
+           <li class="nav-item">
+            <a href="addUser" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+              Add user
+                
+              </p>
+            </a>
+           
+          </li>
+               <li class="nav-item">
+            <a href="approveins" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+              Approver des incidents
+                
+              </p>
+            </a>
+           
+          </li>
+          
 
           
         </ul>
@@ -202,7 +244,7 @@ h1 {
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper" style="background-image: url('dist/img/dindy2.jpg');">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
@@ -222,24 +264,29 @@ h1 {
 
     <!-- Main content -->
     <section class="content">
-      <div class="container-fluid">
+      <div class="container">
 
-        <div class="row">
-
-
+        <div class="row align-items-start">
 
 
 
-                    <div class="col">
 
 
-                    <div class="title" style="font-size =500px">
-                    <h1>welcome<br/>back</h1>
-
-                    </div>
+          <div class="col">
 
 
-                    </div>
+            <div class="title" style="font-size =500px">
+                    <h1>welcome back Dindy</h1>
+                     <img src="dist/img/dindy1.jpg" />
+            </div>
+
+       
+          </div>
+          
+                    
+
+
+        </div>
 
 
 

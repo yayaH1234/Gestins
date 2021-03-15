@@ -30,7 +30,7 @@
 <br/>
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color:#FF4136;">
     <!-- Brand Logo -->
     <a href="" class="brand-link">
       <img src="../../dist/img/AdminLTELogo.png" alt="Dindy" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -90,15 +90,24 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item">
+            <li class="nav-item">
             <a href="/homeC" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Dashboard
+               Ajouter des incidents
                 
               </p>
             </a>
+             <a href="/listinsforcommercial" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Afficher les incidents
+                
+              </p>
+            </a>
+            
           </li>
+          
         </ul>
       </nav>
       @elseif (Auth::user()->is_admin == 1)
@@ -121,6 +130,37 @@
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
               Incidents management
+                
+              </p>
+            </a>
+           
+          </li>
+            <li class="nav-item">
+            <a href="searchins" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+              Incidents search
+                
+              </p>
+            </a>
+           
+          </li>
+           <li class="nav-item">
+            <a href="addUser" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+              Add user
+                
+              </p>
+            </a>
+           
+          </li>
+
+            <li class="nav-item">
+            <a href="approveins" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+              Approver des incidents
                 
               </p>
             </a>
@@ -164,7 +204,7 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper" style="background-image: url('/dist/img/dindy2.jpg');">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
@@ -213,7 +253,7 @@
                   </li>
                 </ul-->
 
-                <button onclick="goBack()" class="btn btn-primary btn-block"><b>Go Back</b></button>
+                <button onclick="goBack()" class="btn btn-primary btn-block" style="background-color:#2e8b57"><b>Go Back</b></button>
                 
                             <script>
                             function goBack() {
@@ -227,13 +267,13 @@
 
             <!-- About Me Box -->
             <div class="card card-primary">
-              <div class="card-header">
+              <div class="card-header" style="background-color:#2e8b57">
                 <h3 class="card-title">Incident Details</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
                 
-              <strong><i class="fas fa-book mr-1"></i> Id</strong>
+              <strong><!--i class="fas fa-book mr-1"></i--> <i class="fas fa-id-card"></i> Id</strong>
 
                 <p class="text-muted">
                 {{ $incident->id }}
@@ -244,7 +284,7 @@
                 
                 
                 
-                <strong><i class="fas fa-book mr-1"></i> Numéro de facture</strong>
+                <strong><!--i class="fas fa-book mr-1"></i--> <i class="fas fa-list-ol"></i> Numéro de facture</strong>
 
                 <p class="text-muted">
                 {{ $incident->num_facture }}
@@ -252,13 +292,13 @@
 
                 <hr>
 
-                <strong><i class="fas fa-map-marker-alt mr-1"></i> Motif</strong>
+                <strong> <i class="far fa-user"></i> Motif</strong>
                 <p class="text-muted"> 
                 {{ $incident->motif }} </p>
 
                 <hr>
 
-                <strong><i class="fas fa-pencil-alt mr-1"></i> Societe</strong>
+                <strong><!--i class="fas fa-pencil-alt mr-1"></i--> <i class="fas fa-building"></i> Societe</strong>
 
                 <p class="text-muted">
                 {{ $incident->societe }}
@@ -266,17 +306,17 @@
 
                 <hr>
 
-                <strong><i class="far fa-file-alt mr-1"></i> Description</strong>
+                <strong><!--i class="far fa-file-alt mr-1"></i--><i class="fas fa-info-circle"></i> Description</strong>
 
                 <p class="text-muted">{{ $incident->description }}</p>
                                 <hr>
-                <strong><i class="far fa-file-alt mr-1"></i> Dates</strong>
+                <strong><!--i class="far fa-file-alt mr-1"></i--><i class="fas fa-calendar-week"></i> Dates</strong>
 
                 <p class="text-muted">{{ $incident->dates }} </p>
             
 
                 <hr>
-              <strong><i class="fas fa-pencil-alt mr-1"></i> Livreur</strong>
+              <strong><!--i class="fas fa-pencil-alt mr-1"></i--> <i class="fas fa-male"></i> Livreur</strong>
 
                 <p class="text-muted">
                 {{ $incident->livreur }}
@@ -285,7 +325,7 @@
                 <hr>
 
 
-                <strong><i class="fas fa-pencil-alt mr-1"></i> Decision</strong>
+                <strong><!--i class="fas fa-pencil-alt mr-1"></i--><i class="fas fa-landmark"></i> Decision</strong>
 
                 <p class="text-muted">
                 {{ $incident->decision }}
@@ -294,7 +334,7 @@
                 <hr>
 
 
-                <strong><i class="fas fa-pencil-alt mr-1"></i> vendue a</strong>
+                <strong><!--i class="fas fa-pencil-alt mr-1"></i--><i class="fas fa-user-friends"></i> vendue a</strong>
 
                 <p class="text-muted">
                 {{ $incident->vendu_a }}
@@ -303,7 +343,7 @@
                 <hr>
 
 
-                <strong><i class="fas fa-pencil-alt mr-1"></i> Client</strong>
+                <strong><!--i class="fas fa-pencil-alt mr-1"></i--><i class="fas fa-user-tie"></i> Client</strong>
 
                 <p class="text-muted">
                 {{ $incident->client }}
@@ -312,7 +352,7 @@
                 <hr>
 
 
-                <strong><i class="fas fa-pencil-alt mr-1"></i> Service responsable</strong>
+                <strong><!--i class="fas fa-pencil-alt mr-1"></i--><i class="fas fa-user-md"></i> Service responsable</strong>
 
                 <p class="text-muted">
                 {{ $incident->service_resp }}
@@ -321,7 +361,7 @@
                 <hr>
 
 
-                <strong><i class="fas fa-pencil-alt mr-1"></i> Réglementation de la revente</strong>
+                <strong><!--i class="fas fa-pencil-alt mr-1"></i--><i class="fas fa-balance-scale-right"></i> Réglementation de la revente</strong>
 
                 <p class="text-muted">
                 {{ $incident->regelement_revente }}
@@ -330,7 +370,7 @@
                 <hr>
 
 
-                <strong><i class="fas fa-pencil-alt mr-1"></i> Commercial</strong>
+                <strong><!--i class="fas fa-pencil-alt mr-1"></i--><i class="fas fa-user-tag"></i> Commercial</strong>
 
                 <p class="text-muted">
                 {{ $incident->commercial }}
@@ -338,10 +378,10 @@
 
                 <hr>
 
-                  <strong><i class="fas fa-pencil-alt mr-1"></i> Prix de vente</strong>
+                  <strong><!--i class="fas fa-pencil-alt mr-1"></i--><i class="fas fa-hand-holding-usd"></i> Prix de vente</strong>
 
                   <p class="text-muted">
-                  {{ $incident->prix_vente }}
+                  {{ $incident->prixvente }}
                   </p>
 
                   <hr>

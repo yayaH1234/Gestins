@@ -7,7 +7,9 @@
 <br/>
 <br/>
 <div class="container">
-    <div class="row justify-content-center">
+
+imposible
+    <!--div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
@@ -70,8 +72,7 @@
                             <label for="role" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
 
                             <div class="col-md-6">
-                                <!--input id="role" type="text" class="form-control @error('role') is-invalid @enderror" name="role" value="{{ old('role') }}" required autocomplete="email"-->
-                                <select class="form-control @error('role') is-invalid @enderror" name="role" id="role">
+                                                                <select class="form-control @error('role') is-invalid @enderror" name="role" id="role">
                                       <option value="">--Please choose a role--</option>
                                       <option value="commercial">commercial</option>
                                       <option value="respqualite">Responsable qualité</option>
@@ -101,6 +102,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div-->
 </div>
 @endsection

@@ -3,49 +3,53 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dindy | update ins page</title>
+  <title>Dindy | searchins</title>
 
-<link rel="icon" href="{{ asset('dist/img/sabApps.png') }}">
+<link rel="icon" href="dist/img/sabApps.png">
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- daterange picker -->
-  <link rel="stylesheet" href="{{ asset('plugins/daterangepicker/daterangepicker.css') }}">
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
   <!-- iCheck for checkboxes and radio inputs -->
-  <link rel="stylesheet" href="{{ asset('plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Bootstrap Color Picker -->
-  <link rel="stylesheet" href="{{ asset('plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css') }}">
+  <link rel="stylesheet" href="plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
   <!-- Tempusdominus Bootstrap 4 -->
-  <link rel="stylesheet" href="{{ asset('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
   <!-- Select2 -->
-  <link rel="stylesheet" href="{{ asset('plugins/select2/css/select2.min.css') }}">
-  <link rel="stylesheet" href="{{ asset('plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+  <link rel="stylesheet" href="plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
   <!-- Bootstrap4 Duallistbox -->
-  <link rel="stylesheet" href="{{ asset('plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css') }}">
+  <link rel="stylesheet" href="plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
   <!-- BS Stepper -->
-  <link rel="stylesheet" href="{{ asset('plugins/bs-stepper/css/bs-stepper.min.css') }}">
+  <link rel="stylesheet" href="plugins/bs-stepper/css/bs-stepper.min.css">
   <!-- dropzonejs -->
-  <link rel="stylesheet" href="{{ asset('plugins/dropzone/min/dropzone.min.css') }}">
+  <link rel="stylesheet" href="plugins/dropzone/min/dropzone.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+
+
 </head>
+
 <body class="hold-transition sidebar-mini">
-<div class="wrapper">
+<nav>
 
 @extends('layouts.app')
 
 @section('content')
-
+</nav>
+<div class="wrapper">
 
 
 
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color:#FF4136;">
     <!-- Brand Logo -->
-    <a href="../../index3.html" class="brand-link">
-      <img src="../../dist/img/AdminLTELogo.png" alt="Dindy" class="brand-image img-circle elevation-3" style="opacity: .8">
+    <a href="" class="brand-link">
+      <img src="dist/img/AdminLTELogo.png" alt="Dindy" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Dindy</span>
     </a>
 
@@ -54,28 +58,20 @@
       <!-- Sidebar user (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block">{{Auth::user()->name}}</a>
         </div>
       </div>
 
+   
 
-
-
-
-
-
-
-
-
-   <!-- Sidebar Menu -->
-   <nav class="mt-2">
+      <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item">
+              <li class="nav-item">
             <a href="/" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
@@ -86,7 +82,7 @@
            
           </li>
           <li class="nav-item">
-            <a href="/inslist" class="nav-link">
+            <a href="inslist" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
               Incidents management
@@ -95,7 +91,7 @@
             </a>
            
           </li>
-            <li class="nav-item">
+           <li class="nav-item">
             <a href="searchins" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
@@ -105,7 +101,7 @@
             </a>
            
           </li>
-           <li class="nav-item">
+            <li class="nav-item">
             <a href="addUser" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
@@ -115,7 +111,7 @@
             </a>
            
           </li>
-          <li class="nav-item">
+               <li class="nav-item">
             <a href="approveins" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
@@ -125,14 +121,12 @@
             </a>
            
           </li>
+           
+          
 
           
         </ul>
       </nav>
-
-
-
-
 
 
 
@@ -168,70 +162,67 @@
     <section class="content">
       <div class="container-fluid">
 
-
         <div class="row">
           <div class="col">
             <div class="card card-primary">
-              <div class="card-header">
-                <h3 class="card-title">incident déclaré</h3>
+              <div class="card-header" style="background-color:#2e8b57">
+                <h3 class="card-title">declared incident</h3>
               </div>
             <div class="card-body">
-            <form  method="POST" action="{{ route('inslist.update',$incident->id) }}" >
+            <form  method="post" action="searchinsl">
             @csrf
-              @method('PUT')
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Numéro de facture</label>
-                    <input type="text" class="form-control" name="num_facture" id="" value="{{ $incident->num_facture }}" placeholder="Invoice number...">
+                    <label for="title">Numéro de facture</label>
+                    <input type="text" class="form-control" id="" name="num_facture" placeholder="Numéro de facture...">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Motif</label>
-                    <input type="text" class="form-control" id=""  name="motif" value="{{ $incident->motif }}" placeholder="Pattern...">
+                    <label for="Department">Motif</label>
+                    <input type="text" class="form-control" id="" name="motif" placeholder="Motif...">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Societe</label>
-                    <input type="text" class="form-control" name="societe"  value="{{ $incident->societe }}" id="" placeholder="Society....">
+                    <label for="Location">Societe</label>
+                    <input type="text" class="form-control" id="" name="societe" placeholder="society....">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Description de l'incident</label>
-                    <textarea type="text" class="form-control" name="description"   id="" placeholder="Describe your incident..."> {{ $incident->description }} </textarea>
+                    <label for="description">Description</label>
+                    <textarea type="text" class="form-control" id="" name="description" placeholder="Description..."></textarea>
                 </div>
                 <!-- Date -->
                 <div class="form-group">
-                  <label>Date:</label>
+                  <label>Date occurence:</label>
                     <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                        <input type="text" class="form-control datetimepicker-input" name="dates"  value="{{ $incident->dates }}" data-target="#reservationdate"/>
+                        <input type="text" class="form-control datetimepicker-input" name="dates" data-target="#reservationdate"/>
                         <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
                             <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                         </div>
-                    </div>
-
-                    <div class="form-group">
+                </div>
+                <div class="form-group">
                     <label for="Location">Livreur</label>
-                    <input type="text" class="form-control" id="" value="{{ $incident->livreur }}" name="livreur" placeholder="Delivery man....">
+                    <input type="text" class="form-control" id="" name="livreur" placeholder="Livreur....">
                 </div>
                 <div class="form-group">
                     <label for="Location">Decision</label>
-                    <input type="text" class="form-control" id="" value="{{ $incident->decision }}" name="decision" placeholder="Decision....">
+                    <input type="text" class="form-control" id="" name="decision" placeholder="Decision....">
                 </div>
                 <div class="form-group">
-                    <label for="Location">Vendu à</label>
-                    <input type="text" class="form-control" id="" value="{{ $incident->vendu_a }}" name="vendu_a" placeholder="Sold to....">
+                    <label for="Location">vendu a</label>
+                    <input type="text" class="form-control" id="" name="vendu_a" placeholder="Vendue a....">
                 </div>
                 <div class="form-group">
                     <label for="Location">Client</label>
-                    <input type="text" class="form-control" id="" value="{{ $incident->client }}" name="client" placeholder="Client....">
+                    <input type="text" class="form-control" id="" name="client" placeholder="Client....">
                 </div>
                 <div class="form-group">
-                    <label for="Location">Service responsable</label>
+                    <label for="Location">Responsible service</label>
                     <!--input type="text" class="form-control" id="" name="service_resp" placeholder="Responsible service...."-->
                     <select style="text-align-last:center;" class="form-control" name="service_resp" id="role">
-                                      <option value="">--Responsible service....--</option>
-                                      <option value="commercial" {{ $incident->service_resp == 'commercial' ? 'selected' : '' }} >Service logistique</option>
-                                      <option value="respqualite" {{ $incident->service_resp == 'respqualite' ? 'selected' : '' }} >Service ADV</option>
-                                       <option value="respproduction" {{ $incident->service_resp == 'respproduction' ? 'selected' : '' }} >service production</option>
-                                        <option value="respadv" {{ $incident->service_resp == 'respadv' ? 'selected' : '' }} >Service Qualité</option>
-                                        <option value="resplogistique" {{ $incident->service_resp == 'resplogistique' ? 'selected' : '' }} >Service commercial</option>
-                                        <option value="resplogistique" {{ $incident->service_resp == 'resplogistique' ? 'selected' : '' }} >Service comptabilité</option>
+                                      <option value="">--Service responsable....--</option>
+                                      <option value="resplogistique">Service logistique</option>
+                                      <option value="respadv">Service ADV</option>
+                                       <option value="respproduction">service production</option>
+                                        <option value="respqualite">Service Qualité</option>
+                                        <option value="commercial">Service commercial</option>
+                                        <option value="resplogistique">Service comptabilité</option>
                                 </select>
                 </div>
 
@@ -239,27 +230,26 @@
                
                 
                 <div class="form-group">
-                    <label for="Location">Réglementation de la revente</label>
-                    <input type="text" class="form-control" id="" value="{{ $incident->regelement_revente }}" name="regelement_revente" placeholder="Resale regulation....">
+                    <label for="Location">Réglementation du revente</label>
+                    <input type="text" class="form-control" id="" name="regelement_revente" placeholder="Réglementation de la revente....">
                 </div>
                 <div class="form-group">
                     <label for="Location">Commercial</label>
-                    <input type="text" class="form-control" id=""  value="{{ $incident->commercial }}" name="commercial" placeholder="commercial name....">
+                    <input type="text" class="form-control" id=""  name="commercial" placeholder="commercial....">
                 </div>
                 <div class="form-group">
                     <label for="Location">Prix de vente</label>
-                    <input type="text" class="form-control" id="" value="{{ $incident->prixvente }}" name="prix_vente" placeholder="Sell price....">
+                    <input type="text" class="form-control" id="" name="prix_vente" placeholder="Prix de vente....">
                 </div>
 
-
-
-                  
-                </div>
+              </div>
                 <!-- /.form group -->
-                
+                <!-- Date range -->
+               
+               
                 <!-- /.form group -->
                 <div class="">
-                    <button type="submit" style="background-color:#2e8b57" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Search</button>
                 </div>
             </form>
               <!-- /.card -->
@@ -275,12 +265,133 @@
     </section>
     <!-- /.content -->
   </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@if ($incidents ==  null)
+
+    <!-- Main content -->
+    <section class="content">
+
+      <!-- Default box -->
+      <div class="card card-solid">
+        <div class="card-body pb-0">
+          <div class="row">
+
+
+          @foreach ($incidents as $incident)
+     
+          @if (Auth::user()->clienttype == $incident->service_resp)
+            <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
+              <div class="card bg-light d-flex flex-fill">
+                <div class="card-header text-muted border-bottom-0">
+                  
+                </div>
+                <div class="card-body pt-0">
+                  <div class="row">
+                    <div class="col-7">
+                      <h2 class="lead"><b>{{ $incident->commercial }}</b></h2>
+                      <p class="text-muted text-sm"><b>About: </b> {{ $incident->client }} </p>
+                      <ul class="ml-4 mb-0 fa-ul text-muted">
+                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Society: {{ $incident->societe }}</li>
+                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> numFacture #: {{ $incident->num_facture }}</li>
+                      </ul>
+                    </div>
+                    <div class="col-5 text-center">
+                      <img src="dist/img/user2-160x160.jpg" alt="user-avatar" class="img-circle img-fluid">
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="text-right">
+
+                    @if(Auth::user()->clienttype == 'commercial')  
+                     <a href="/viewdetcom/{{ $incident->id }}" class="btn btn-sm btn-primary">
+                      <i class="fas fa-user"></i> Voir les détails
+                    </a> 
+@else
+     <a href="/viewdet/{{ $incident->id }}" class="btn btn-sm btn-primary">
+                      <i class="fas fa-user"></i> Voir les détails
+                    </a>        
+@endif
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            @endif
+
+
+
+            @endforeach
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+        <!-- /.card-body -->
+        <!--div class="card-footer">
+          <nav aria-label="Contacts Page Navigation">
+            <ul class="pagination justify-content-center m-0">
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">5</a></li>
+              <li class="page-item"><a class="page-link" href="#">6</a></li>
+              <li class="page-item"><a class="page-link" href="#">7</a></li>
+              <li class="page-item"><a class="page-link" href="#">8</a></li>
+            </ul>
+          </nav>
+        </div-->
+        
+        <!-- /.card-footer -->
+      </div>
+      <!-- /.card -->
+
+    </section>
+    <!-- /.content -->
+  
+  <!-- /.content-wrapper -->
+
+
+@endif
+
+
+
+
+
+
+
+
+
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
-      <b>Version</b> 1.0.0
+      <b>Version</b> 1.0.0-rc
     </div>
-    <strong>Copyright &copy; {{ date('Y') }} <a href=""><img src="{{ asset('dist/img/sabApps.png') }}" width="50px" height="40px" /> sabApps</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; {{ date('Y') }} <a href=""><img src="dist/img/sabApps.png" width="50px" height="40px" /> sabApps</a>.</strong> All rights reserved.
   </footer>
 
   <!-- Control Sidebar -->
@@ -442,6 +553,7 @@
   }
   // DropzoneJS Demo Code End
 </script>
+
 @endsection
 </body>
 </html>

@@ -8,6 +8,9 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\IncidentController;
 
 
+use App\Http\Controllers\IncidenttController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +25,7 @@ use App\Http\Controllers\IncidentController;
 Route::get('/login', function () {
     return view('/auth/login');
 });
+
 
 Auth::routes();
 
@@ -48,10 +52,7 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
         return view('showuser',$user);
     })->name('showuser');*/
    
-    Route::get('approveuser', function ()
-    {
-        return view('approveuser');
-    })->name('approveuser');
+
     
     Route::resource('inslist', incidentController::class);
 
@@ -68,8 +69,13 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     
     Route::post('addinspost', [PostController::class, 'addinspostm']);
     
-    
-    
+     Route::get('searchins', [PostController::class,'listserchget'])->name('searchins');
+     Route::post('searchinsl', [PostController::class,'listserchpost'])->name('searchins');
+
+     Route::get('addUser', [PostController::class,'useradd'])->name('searchins');
+     Route::post('addUserPost', [PostController::class,'useraddpost'])->name('searchins');
+
+        Route::resource('approveins', IncidenttController::class );
 });
 
 
@@ -88,8 +94,8 @@ Route::group(['middleware' => ['commercial']], function () {
     Route::post('addinspostdata',[PostController::class, 'addinspostm']);
 
 
-
-
+Route::get('listinsforcommercial', [PostController::class, 'showincidentlist'])->name('inslst');
+Route::get('/viewdetcom/{id}', [incidentController::class,'show'])->name('inslst');
 });
 
 Route::group(['middleware' => ['isconsuser']], function () {

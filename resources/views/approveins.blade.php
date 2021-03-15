@@ -26,7 +26,7 @@
 
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color:#FF4136;">
     <!-- Brand Logo -->
     <a href="../../index3.html" class="brand-link">
       <img src="dist/img/AdminLTELogo.png" alt="Dindy" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -53,11 +53,51 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item">
-            <a href="#" class="nav-link">
+      <li class="nav-item">
+            <a href="/" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Dashboard
+              Users management
+                
+              </p>
+            </a>
+           
+          </li>
+          <li class="nav-item">
+            <a href="inslist" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+              Incidents management
+                
+              </p>
+            </a>
+           
+          </li>
+           <li class="nav-item">
+            <a href="searchins" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+              Incidents search
+                
+              </p>
+            </a>
+           
+          </li>
+            <li class="nav-item">
+            <a href="addUser" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+              Add user
+                
+              </p>
+            </a>
+           
+          </li>
+            <li class="nav-item">
+            <a href="addUser" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+              Approver des incidents
                 
               </p>
             </a>
@@ -76,7 +116,7 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper" style="background-image: url('dist/img/dindy2.jpg');">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
@@ -100,7 +140,7 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">New  users</h3>
+          <h3 class="card-title">New  Incidents</h3>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -116,49 +156,71 @@
               <thead>
                   <tr>
                       <th style="width: 1%">
-                          #
+                          #Id
                       </th>
                       <th style="width: 20%">
-                      Name
+                       Societe
                       </th>
                       <th style="width: 30%">
-                      Email
+                      Motif
                       </th>
                       <th>
-                      Role
+                      Commercial
                       </th>
-                      <th style="width: 8%" class="text-center">
-                      Is admin
+                      <th style="width: 30%" class="text-center">
+                      Prix de vente
                       </th>
-                      <th style="width: 20%">
+                      <th style="wiDth: 20%">
+                      dates
                       </th>
+                      <th style="wiDth: 20%">
+                      
+                      </th>
+
                   </tr>
               </thead>
               <tbody>
+    @foreach ($incidents as $incident)
                   <tr>
-                      <td>
-                          #
+                    <td>
+                         #{{ $incident->num_facture }}
                       </td>
                       <td>
-                      <a>
-                        name
-                        </a>
+                          <a>
+                               {{ $incident->societe }} 
+                          </a>
                           
                       </td>
                       <td>
-                      email
+                      {{ $incident->motif }}
                       </td>
                       <td class="project_progress">
-                      clienttype
+                       {{ $incident->commercial }}
+                      
                       </td>
                       <td class="project-state">
-                          <span class="badge badge-success">isadm</span>
+                    {{ $incident->prixvente }} 
                       </td>
+                      <td style="wiDth: 20%">
+                        {{ $incident->dates }}
+                      </td>
+
+
+
                       <td class="project-actions text-right">
                       <td class="text-right py-0 align-middle">
                   <div class="btn-group btn-group-sm">
-                    <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                    <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+
+
+                    <form action="approveins/{{$incident->id}}" method="POST">
+
+
+                   <a href="{{ route('approveins.edit',$incident) }}" style="background-color:green;" class="btn btn-info"><i class="fas fa-plus"></i></a>
+                    <a href="{{ route('approveins.show',$incident->id) }}" class="btn btn-info"><i class="fas fa-eye"></i></a>
+                       @csrf
+                           @method('DELETE')
+                    <button class="btn btn-danger" type="submit"><i class="fas fa-trash"></i></button>
+                      </form>
                   </div>
                 </td>
                       </td>
@@ -168,7 +230,8 @@
 
 
 
-
+      
+                  @endforeach
 
 
 

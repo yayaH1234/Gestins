@@ -86,7 +86,7 @@
             </a>
            
           </li>
-           <li class="nav-item">
+            <li class="nav-item">
             <a href="addUser" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
@@ -96,7 +96,7 @@
             </a>
            
           </li>
-           <li class="nav-item">
+               <li class="nav-item">
             <a href="approveins" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
@@ -152,18 +152,17 @@
           <div class="col ">
             <!-- general form elements -->
             <div class="card card-primary ">
-              <div class="card-header">
+              <div class="card-header" style="background-color:#2e8b57">
                 <h3 class="card-title">User forms</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form action="{{ route('userlist.update',$user->id) }}" method="POST">
+              <form action="addUserPost" method="POST">
               @csrf
-              @method('PUT')
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Nom complet</label>
-                    <input type="text" class="form-control" value="{{ $user->name }}" id="" name="name" placeholder="Enter email">
+                    <input type="text" class="form-control"  id="" name="name" placeholder="Enter email">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">droit d'acces du client</label>
@@ -171,11 +170,11 @@
                       <select  class="form-control @error('role') is-invalid @enderror" name="role" id="role">
                                       
                                       <option value="">--Please choose a role--</option>
-                                      <option value="commercial" {{ $user->clienttype == 'commercial' ? 'selected' : '' }} >commercial</option>
-                                      <option value="respqualite" {{ $user->clienttype == 'respqualite' ? 'selected' : '' }} >Quality Manager</option>
-                                       <option value="respproduction" {{ $user->clienttype == 'respproduction' ? 'selected' : '' }} >Responsible production</option>
-                                        <option value="respadv" {{ $user->clienttype == 'respadv' ? 'selected' : '' }} >responsable adv</option>
-                                        <option value="resplogistique" {{ $user->clienttype == 'resplogistique' ? 'selected' : '' }} >logistics manager</option>
+                                      <option value="commercial"  >commercial</option>
+                                      <option value="respqualite"  >Quality Manager</option>
+                                       <option value="respproduction" >Responsible production</option>
+                                        <option value="respadv"  >responsable adv</option>
+                                        <option value="resplogistique" >logistics manager</option>
                                 </select>
                                 @error('role')
                                     <span class="invalid-feedback" role="alert">
@@ -185,7 +184,7 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="" name="email" value="{{  $user->email  }}" placeholder="Enter email">
+                    <input type="email" class="form-control" id="" name="email" placeholder="Enter email">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Password</label>
@@ -199,9 +198,9 @@
                     <label for="">Est Admin ?</label><br>
                     <label for="yes">Yes</label>
 
-                     <input type="radio" id="adminchoice"  name="radio" value="true" {{ $user->is_admin == '1' ? 'checked' : '' }}>
+                     <input type="radio" id="adminchoice"  name="radio" value="true" >
                       <label for="no">No</label>
-                     <input type="radio" id="adminchoice"  name="radio" value="false" {{ $user->is_admin == '' ? 'checked' : '' }}>
+                     <input type="radio" id="adminchoice"  name="radio" value="false" >
                   </div>
                   
                   

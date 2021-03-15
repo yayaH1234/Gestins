@@ -33,7 +33,7 @@ class PostController extends Controller
 
           try{
 
-       DB::table('incidents')->insert([
+       DB::table('incidenttemps')->insert([
         'num_facture' => $request->input('num_facture'),
             'motif' => $request->input('motif'),
             'societe' => $request->input('societe'),
@@ -93,6 +93,135 @@ class PostController extends Controller
         $incidents = Incident::all();
         return view('showins',compact('incidents'));
     }
+
+     public function listserchget(){
+        $incidents = new Incident;
+        return view('searchins',compact('incidents'));
+    }
+
+    public function listserchpost(Request $request){
+
+           
+            $incidents = new Incident;
+              if($request->has('num_facture')){
+      
+                $incidents = DB::table('incidents')->where('num_facture', 'like', '%'.$request->num_facture.'%')->get();
+    }
+             if( $request->has('motif') ){
+      
+                $incidents->merge(DB::table('incidents')->where('motif', 'like', '%'.$request->motif.'%')->get());
+    }
+    if( $request->has('description') ){
+      
+                $incidents->merge(DB::table('incidents')->where('description', 'like', '%'.$request->description.'%')->get());
+    }
+    if( $request->has('livreur') ){
+      
+                $incidents->merge(DB::table('incidents')->where('livreur', 'like', '%'.$request->livreur.'%')->get());
+    }
+    if( $request->has('vendu_a') ){
+      
+                $incidents->merge(DB::table('incidents')->where('vendu_a', 'like', '%'.$request->vendu_a.'%')->get());
+    }
+    if( $request->has('decision') ){
+      
+                $incidents->merge(DB::table('incidents')->where('decision', 'like', '%'.$request->decision.'%')->get());
+    }
+    if( $request->has('commercial') ){
+      
+                $incidents->merge(DB::table('incidents')->where('commercial', 'like', '%'.$request->commercial.'%')->get());
+    }
+    if( $request->has('societe') ){
+      
+                $incidents->merge(DB::table('incidents')->where('societe', 'like', '%'.$request->societe.'%')->get());
+    }
+    if( $request->has('dates') ){
+      
+                $incidents->merge(DB::table('incidents')->where('dates', 'like', '%'.$request->dates.'%')->get());
+    }
+    if( $request->has('prixvente') ){
+      
+                $incidents->merge(DB::table('incidents')->where('prixvente', 'like', '%'.$request->prixvente.'%')->get());
+    }
+    if( $request->has('service_resp') ){
+      
+                $incidents->merge(DB::table('incidents')->where('service_resp', '=', $request->service_resp)->get());
+    }
+     if( $request->has('commercial') ){
+      
+                $incidents->merge(DB::table('incidents')->where('commercial', 'like', '%'.$request->commercial.'%')->get());
+    }
+/*
+        $incidents = DB::table('incidents')
+                ->where([
+    ['num_facture', 'like', $request->num_facture.'%'],
+    ['motif', 'like', $request->motif.'%'],
+    ['description', 'like', $request->description.'%'],
+    ['livreur', 'like', $request->livreur.'%'],
+    ['decision', 'like', $request->decision.'%'],
+    ['vendu_a', 'like', $request->vendu_a.'%'],
+    ['commercial', 'like', $request->motif.'%'],
+    ['societe', 'like', $request->societe.'%'],
+    ['dates', 'like', $request->dates.'%'],
+    ['prixvente', 'like',$request->motif.'%'],
+    ['client', 'like', $request->client.'%'],
+    ['client', 'like', $request->client.'%'],
+])
+                ->get();
+
+
+                */
+
+
+
+    
+
+
+       // return view('searchins',compact('incidents'));
+       return $incidents;
+    }
+
+public function useradd(){
+    return view('adduser');
+}
+public function useraddpost(Request $request){
+        
+    
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'role' => 'required',
+            'email' => 'required',
+            'password1' => 'required',
+            'password2' => 'required',
+            'radio' => 'required'
+          ]);
+
+if($request->password1 == $request->password2){
+    $isadm=$request->radio;
+    if($isadm == 'false'){
+               $isadm=0;
+           }
+           if($isadm == 'true'){
+            $isadm=1;
+        }
+
+    DB::table('users')->insert([
+    'id' => rand(2,5000),
+    'name' => $request->name,
+    'email' => $request->email,
+    'password' => $request->password1,
+    'clienttype' => $request->role,
+    'is_admin' => $isadm
+]);
+
+
+
+
+}
+ return view('adduser');
+
+}
+
 
 
 }
