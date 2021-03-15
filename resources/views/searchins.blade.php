@@ -296,7 +296,7 @@
 
           @foreach ($incidents as $incident)
      
-          @if (Auth::user()->clienttype == $incident->service_resp)
+       
             <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
               <div class="card bg-light d-flex flex-fill">
                 <div class="card-header text-muted border-bottom-0">
@@ -334,7 +334,7 @@
               </div>
             </div>
 
-            @endif
+            
 
 
 

@@ -103,53 +103,53 @@ class PostController extends Controller
 
            
             $incidents = new Incident;
-              if($request->has('num_facture')){
+              if($request->input('num_facture') != null){
       
                 $incidents = DB::table('incidents')->where('num_facture', 'like', '%'.$request->num_facture.'%')->get();
     }
-             if( $request->has('motif') ){
+             if( $request->input('motif') != null){
       
-                $incidents->merge(DB::table('incidents')->where('motif', 'like', '%'.$request->motif.'%')->get());
+                $incidents = DB::table('incidents')->where('motif', 'like', '%'.$request->motif.'%')->get();
     }
-    if( $request->has('description') ){
+    if( $request->input('description') != null){
       
-                $incidents->merge(DB::table('incidents')->where('description', 'like', '%'.$request->description.'%')->get());
+                $incidents = DB::table('incidents')->where('description', 'like', '%'.$request->description.'%')->get();
     }
-    if( $request->has('livreur') ){
+    if( $request->input('livreur') != null){
       
-                $incidents->merge(DB::table('incidents')->where('livreur', 'like', '%'.$request->livreur.'%')->get());
+                $incidents = DB::table('incidents')->where('livreur', 'like', '%'.$request->livreur.'%')->get();
     }
-    if( $request->has('vendu_a') ){
+    if( $request->input('vendu_a') != null){
       
-                $incidents->merge(DB::table('incidents')->where('vendu_a', 'like', '%'.$request->vendu_a.'%')->get());
+                $incidents = DB::table('incidents')->where('vendu_a', 'like', '%'.$request->vendu_a.'%')->get();
     }
-    if( $request->has('decision') ){
+    if( $request->input('decision') != null){
       
-                $incidents->merge(DB::table('incidents')->where('decision', 'like', '%'.$request->decision.'%')->get());
+                $incidents = DB::table('incidents')->where('decision', 'like', '%'.$request->decision.'%')->get();
     }
-    if( $request->has('commercial') ){
+    if( $request->has('commercial') != null){
       
-                $incidents->merge(DB::table('incidents')->where('commercial', 'like', '%'.$request->commercial.'%')->get());
+                $incidents = DB::table('incidents')->where('commercial', 'like', '%'.$request->commercial.'%')->get();
     }
-    if( $request->has('societe') ){
+    if( $request->input('societe') != null ){
       
-                $incidents->merge(DB::table('incidents')->where('societe', 'like', '%'.$request->societe.'%')->get());
+                $incidents = DB::table('incidents')->where('societe', 'like', '%'.$request->societe.'%')->get();
     }
-    if( $request->has('dates') ){
+    if( $request->input('dates') != null){
       
-                $incidents->merge(DB::table('incidents')->where('dates', 'like', '%'.$request->dates.'%')->get());
+                $incidents = DB::table('incidents')->where('dates', 'like', '%'.$request->dates.'%')->get();
     }
-    if( $request->has('prixvente') ){
+    if( $request->input('prixvente') != null){
       
-                $incidents->merge(DB::table('incidents')->where('prixvente', 'like', '%'.$request->prixvente.'%')->get());
+                $incidents=DB::table('incidents')->where('prixvente', 'like', '%'.$request->prixvente.'%')->get();
     }
-    if( $request->has('service_resp') ){
+    if( $request->input('service_resp') != null){
       
-                $incidents->merge(DB::table('incidents')->where('service_resp', '=', $request->service_resp)->get());
+                $incidents=DB::table('incidents')->where('service_resp', '=', $request->service_resp)->get();
     }
-     if( $request->has('commercial') ){
+     if( $request->input('commercial') != null){
       
-                $incidents->merge(DB::table('incidents')->where('commercial', 'like', '%'.$request->commercial.'%')->get());
+                $incidents=DB::table('incidents')->where('commercial', 'like', '%'.$request->commercial.'%')->get();
     }
 /*
         $incidents = DB::table('incidents')
@@ -177,8 +177,8 @@ class PostController extends Controller
     
 
 
-       // return view('searchins',compact('incidents'));
-       return $incidents;
+        return view('showserchlist',compact('incidents'));//redirect()->route('showserchlist', [$incidents]);//redirect('showserchlist',compact('incidents'));//view('searchins',compact('incidents'));
+      // return $incidents;
     }
 
 public function useradd(){
