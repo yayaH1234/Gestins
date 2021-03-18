@@ -273,16 +273,11 @@
                 </div>
                 <div class="card-footer">
                   <div class="text-right">
-
-                    @if(Auth::user()->clienttype == 'commercial')  
-                     <a style="background-color:#2e8b57" href="/viewdetcom/{{ $incident->id }}" class="btn btn-sm btn-primary">
-                      <i class="fas fa-user"></i> Voir les détails
-                    </a> 
-@else
-     <a style="background-color:#2e8b57" href="/viewdet/{{ $incident->id }}" class="btn btn-sm btn-primary">
+                   
+     <a style="background-color:#2e8b57" href="/viewdetcomAd/{{ $incident->id }}" class="btn btn-sm btn-primary">
                       <i class="fas fa-user"></i> Voir les détails
                     </a>        
-@endif
+
                   </div>
                 </div>
               </div>

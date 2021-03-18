@@ -7,6 +7,10 @@ use App\Models\Incident;
 use Redirect;
 use Illuminate\Support\Facades\DB;
 
+
+use App\Exports\IncidentExport;
+use App\Exports\UserExport;
+use Maatwebsite\Excel\Facades\Excel;
 class PostController extends Controller
 {
     //
@@ -222,6 +226,15 @@ if($request->password1 == $request->password2){
 
 }
 
+
+public function expoIns(){
+ return Excel::download(new IncidentExport, 'incidents.xlsx');
+}
+
+
+public function expoUsr(){
+ return Excel::download(new UserExport, 'users.xlsx');
+}
 
 
 }

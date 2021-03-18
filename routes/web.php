@@ -76,6 +76,13 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
      Route::post('addUserPost', [PostController::class,'useraddpost'])->name('searchins');
 
         Route::resource('approveins', IncidenttController::class );
+
+        Route::get('/viewdetcomAd/{id}', [incidentController::class,'show'])->name('inslst');
+
+
+        Route::get('/exportins', [PostController::class,'expoIns'])->name('exportins');
+        Route::get('/exportuser', [PostController::class,'expoUsr'])->name('exportins');
+
 });
 
 
