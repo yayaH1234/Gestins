@@ -36,8 +36,10 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     
     
   //  Route::get('/home',  [AdminController::class, 'index']);
-    Route::get('/',  [AdminController::class, 'index']);
-    
+
+    Route::get('/',  [AdminController::class, 'index'])->middleware('isadvresp');
+    Route::resource('userlist',  AdminController::class);
+
     Route::get('updateuser', function ()
     {
         return view('updateuser');
@@ -46,7 +48,7 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     {
         return view('userlist');
     })->name('userlist');*/
-    Route::resource('userlist',  AdminController::class);
+    
     /*Route::get('showuser/{user}', function ($user)
     {
         return view('showuser',$user);
